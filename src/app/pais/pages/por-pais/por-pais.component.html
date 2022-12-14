@@ -16,9 +16,11 @@
 
 <hr />
 
-<div class="alert alert-danger">No se encontró nada con el término</div>
+<div *ngIf="hayError" class="alert alert-danger">
+  No se encontró nada con el término {{ termino }}
+</div>
 
-<div class="row">
+<div *ngIf="!hayError" class="row">
   <div class="col">
     <table class="table table-hover">
       <thead>
@@ -44,4 +46,3 @@
     </table>
   </div>
 </div>
-
