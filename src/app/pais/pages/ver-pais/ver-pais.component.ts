@@ -3,14 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ver-pais',
   templateUrl: './ver-pais.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class VerPaisComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
