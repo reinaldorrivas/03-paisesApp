@@ -18,13 +18,13 @@ export class PorPaisComponent {
     this.hayError = false;
     this.termino = termino;
 
-    this.paisService.buscarPais(this.termino).subscribe(
-      (paises) => (this.paises = paises),
-      (error) => {
+    this.paisService.buscarPais(this.termino).subscribe({
+      next: (paises) => (this.paises = paises),
+      error: (error) => {
         this.hayError = true;
         this.paises = [];
-      }
-    );
+      },
+    });
   }
 
   public sugerencias(termino: string): void {
