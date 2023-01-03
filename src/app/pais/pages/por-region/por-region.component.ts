@@ -5,7 +5,13 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-por-region',
   templateUrl: './por-region.component.html',
-  styles: [],
+  styles: [
+    `
+      h3 {
+        margin-top: 0.25rem;
+      }
+    `,
+  ],
 })
 export class PorRegionComponent {
   public regiones: string[] = [
@@ -27,9 +33,15 @@ export class PorRegionComponent {
 
     this.paisService.buscarRegion(this.regionActiva).subscribe({
       next: (paises) => (this.paises = paises),
-      error: (error) => {
+      error: () => {
         this.paises = [];
       },
     });
+  }
+
+  public getCssClass(region: string) {
+    return region === this.regionActiva
+      ? 'btn-primary'
+      : 'btn-outline-primary';
   }
 }
