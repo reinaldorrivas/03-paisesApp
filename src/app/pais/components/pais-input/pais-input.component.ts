@@ -21,10 +21,10 @@ export class PaisInputComponent implements OnInit {
   }
 
   public buscar(): void {
-    this.onEnter.emit(this.termino);
+    this.onEnter.emit(this.termino.trim());
   }
 
   public teclaPresionada(): void {
-    this.debouncer.next(this.termino);
+    this.debouncer.next(this.termino.trim());
   }
 }
