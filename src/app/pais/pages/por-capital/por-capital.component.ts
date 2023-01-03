@@ -5,7 +5,13 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-por-capital',
   templateUrl: './por-capital.component.html',
-  styles: [],
+  styles: [
+    `
+      h3 {
+        margin-top: 0.25rem;
+      }
+    `,
+  ],
 })
 export class PorCapitalComponent {
   public termino: string = '';

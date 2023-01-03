@@ -12,6 +12,10 @@ import { PaisService } from '../../services/pais.service';
       img {
         width: 150px;
       }
+
+      h3 {
+        margin-top: 0.25rem;
+      }
     `,
   ],
 })
